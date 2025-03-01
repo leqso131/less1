@@ -1,0 +1,13 @@
+<app-contacts (searchEvent)="filterProducts($event)"></app-contacts>
+
+<section class="d-flex flex-wrap gap-5 justify-content-center mt-5">
+  <div *ngFor="let item of filteredProducts" class="card" style="width: 18rem;">
+    <img [src]="item.Images" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.brand }} {{ item.model }}</h5>
+      <h5 class="card-title">Price: {{ item.price }}$</h5>
+      <p class="card-text">Some quick example text...</p>
+      <a (click)="goToDetails(item)" class="btn btn-primary">View Details</a>
+    </div>
+  </div>
+</section>

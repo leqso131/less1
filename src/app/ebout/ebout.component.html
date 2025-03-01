@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>{{ product?.price }}$</h1>
+    <p [style.color]="product?.price > 1500 ? 'red' : 'green'" 
+       [style.fontWeight]="'bold'">
+      {{ product?.price > 1500 ? 'ეს ფასი მიუღებელია' : 'ეს ფასი მისაღებია' }}
+    </p>
+    <img width="400" [src]="product?.Images" alt="Product Image">
+  </div>
+  
